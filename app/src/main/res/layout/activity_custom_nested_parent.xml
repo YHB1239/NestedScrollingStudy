@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".custom.CustomNestedParentActivity">
+
+    <!--展示图片-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <!--标题栏-->
+    <include layout="@layout/layout_common_toolbar"/>
+
+    <!--嵌套滑动父控件-->
+    <me.stefan.coordinatorlayoutstudy.custom.view.CustomNestedScrollingLayout
+        android:id="@+id/sick_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--透明TopView-->
+        <View
+            android:id="@+id/top_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <!--TabLayout-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            app:tabIndicatorColor="#000000"/>
+        <!--ViewPager-->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"/>
+    </me.stefan.coordinatorlayoutstudy.custom.view.CustomNestedScrollingLayout>
+</RelativeLayout>

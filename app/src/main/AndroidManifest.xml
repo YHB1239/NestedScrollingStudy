@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.stefan.coordinatorlayoutstudy">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CoordinatorLayoutStudy">
+        <activity android:name=".custom.CustomNestedChildActivity"></activity>
+        <activity android:name=".custom.CustomActivity" />
+        <activity android:name=".custom.CustomNestedParentActivity" />
+        <activity android:name=".custom.CustomBehaviorActivity" />
+        <activity android:name=".basic.CollapsingToolbarLayoutActivity" />
+        <activity android:name=".basic.AppBarLayoutActivity" />
+        <activity android:name=".basic.BasicUseActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
